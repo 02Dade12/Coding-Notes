@@ -7,6 +7,8 @@
 // One equal sign "="is an assignment
 // Two equal signs "=="is a comparison; does left == right
 // Three equal signs "==="is explicit or exact match
+// || is equal to "or"
+// $$ is equal to "and"
 
 //Variables
 var variable = ""
@@ -50,7 +52,7 @@ parseInt();
 // This will convert a string into an integer
 
 // Arrays
-var exampleArr = ["zebra", "cat", "dog", "monkey", 2, stringVar, "bird"];
+var exampleArr = ["Zebra", "cat", "dog", "monkey", 2, stringVar, "bird"];
 // An array is a collection of items strings, numbers, Booleans, Varibales, etc...
 // Arrays are numbers that start with an Index of 0 example below:
 // zebra, cat, dog, monkey
@@ -62,4 +64,31 @@ console.log(exampleArr[6]);
 console.log(exampleArr.indexOf("boss"));
 // this will return the index of the item in ()
 // this will also only return the first index if the item is repeated
-// if item is not in the array, it will return index of -1
+// if item is not in the array, it will return index of -1 (such as the example above
+
+//.toLowerCase()
+console.log(exampleArr[0].toLowerCase());
+console.log(("STRING").toLowerCase());
+// .toLowerCase() is a built in method that comes with javascrript and therfore requires ()
+
+// Loops
+var forLoopArrEx = ["First", "Second", "Third", "Fourth", "Fifth"];
+
+for (var i = 0; i < forLoopArrEx.length; i++) {
+    console.log("I came in " + forLoopArrEx);
+    /*Code between the { } gets repeated each time the iterator is smaller 
+    than the condition (in this case, as long as  i < 5) */
+}
+// var i = 0; is the "Iterator"
+// i < forLoopArrEx.length; is the "Condition"
+// i++; is the Increment
+
+// .charAt(0)
+forLoopArrEx = ["First", "Second", "Third", "Fourth", "Fifth"];
+
+for (var i = 0; i < forLoopArrEx.length; i++) {
+    if (forLoopArrEx[i].charAt === "F" || forLoopArrEx[i]=== "S") {
+        alert("This word started with an 'F' or 'S'")
+    }
+}
+// 
