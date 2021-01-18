@@ -33,8 +33,10 @@ var functionVar = function(){};
 console.log("string" + isBooleanVar);
 console.log(variable);
 console.log(numberVar + 1);
+console.log(window);
 // The console.log() method is used to display data in the the browser’s console. 
 // Console Logs allow developers to test what they build as they build it
+// console.log(window) will give you property and value information about the window
 
 
 // Prompts, Confirms, & Alerts
@@ -125,6 +127,26 @@ function funcDefitionEx(){
 // The function is defined/named followed by ()
 // Arguments can be brought in and passed in to the function if inside the ()
 // Once a function is describe, it must be called after for it to be used
+function addReturn (x, y, z) {
+    return x + y + z;
+};
+// Multiple arguments can be placed within the ()
+// "return" will return the result of the function, OUTSIDE of the function
 
 
-// 
+// Objects
+var objectExample = {
+    "First": "Me",
+    "Second": "You",
+    "Third": "Them",
+    "First Name": "Me First",
+};
+// On the left of the : is the "property"
+// Properties are known as descriptors 
+// On the right of the : is the "value" of that property 
+// Each on is seperated with a ,
+// The properties and values can be accesed like this:
+// objectExample["first"] or objectExample.first
+// DOT notation cannot be used if there is a space in the property
+
+
