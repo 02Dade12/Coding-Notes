@@ -193,6 +193,10 @@ var list = document.getElementsByTagName("li");
 // setInterval()
 setInterval(() => {
     
+clearInterval();
 }, interval);
+
+
 // this allows you to set the time in milliseconds 
 // this taks a functions to let you know what should be done during the interval
+// this is an annoynomus function that will call itset when the interval is set
