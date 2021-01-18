@@ -34,9 +34,11 @@ console.log("string" + isBooleanVar);
 console.log(variable);
 console.log(numberVar + 1);
 console.log(window);
+console.log(this);
 // The console.log() method is used to display data in the the browser’s console. 
 // Console Logs allow developers to test what they build as they build it
 // console.log(window) will give you property and value information about the window
+// console.log(this) will give us access to the Window Object
 
 
 // Prompts, Confirms, & Alerts
@@ -150,3 +152,47 @@ var objectExample = {
 // DOT notation cannot be used if there is a space in the property
 
 
+// window.document
+console.log(window.document);
+console.log(this);
+console.log(document.body.children[0].childNodes) // Example with Nodes
+// This is how you access the Document Object Module aka The DOM
+// DOM is an object-oriented representation of HTML (i.e., the HTML document modeled as JavaScript objects)
+// Each element is a Node; Nodes are organized in a tree.
+// The DOM can be manipulated from the DEV Tools in google (in the console)
+// This is helpful for debugging 
+// Use DOT notation to traverse the DOM
+
+
+// querySelector(All) & .setAttribute
+var pickMe = document.querySelector(".class"); //this will select elements with this class
+var pickMe = document.querySelector("#id"); // this will select elements with this id
+var pickAll = document.querySelectorAll("P"); // this will select all the "P-tags"
+for ( var i = 0; i < pickMe.length; i++){
+    pickAll[0].setAttribute("style", "color:red;");
+}
+// In this example, the document will set the CSS font color attribute to red for all "P-tags"
+// This is equvalient to adding CSS Style inline to our JavaScript
+
+
+// createElement & appendChild
+var newElement = document.createElement("string or var that holds the element to be added");
+newElement.textContent = "New element created";
+document.body.appendChild(newElement);
+// createElement will create a new element in Javascript
+// Once an element is created, they will not appear on the HTML until they are appended
+// appendChild will append the element to a parent at the end of list of elements in; in this case the parent is the "Body"
+// If new elements are being created, append them in the order you want them to appear 
+
+
+// getElementByTagName("")
+var list = document.getElementsByTagName("li");
+// this will give you an Array of the desired element, in this example list items
+
+
+// setInterval()
+setInterval(() => {
+    
+}, interval);
+// this allows you to set the time in milliseconds 
+// this taks a functions to let you know what should be done during the interval
