@@ -10,10 +10,13 @@
 // == Two equal signs is a comparison; does left == right
 // === Three equal signs is explicit or exact match
 // !== is equal to !-NOT ==EQUAL
+// += this means take left value and add right value example; 0 += 1 equals 1
 // !variable === is equal to !-NOT ==EQUAL
 // || is equal to "or"
 // $$ is equal to "and"
 // \n is a character to make a line break
+// -- means subtract by 1
+// ++ means add by 1
 
 
 //Variables
@@ -170,6 +173,7 @@ var pickMe = document.querySelector("#id"); // this will select elements with th
 var pickAll = document.querySelectorAll("P"); // this will select all the "P-tags"
 for ( var i = 0; i < pickMe.length; i++){
     pickAll[0].setAttribute("style", "color:red;");
+                         // "property", "value"
 }
 // In this example, the document will set the CSS font color attribute to red for all "P-tags"
 // This is equvalient to adding CSS Style inline to our JavaScript
@@ -195,8 +199,28 @@ setInterval(() => {
     
 clearInterval();
 }, interval);
-
-
 // this allows you to set the time in milliseconds 
 // this taks a functions to let you know what should be done during the interval
 // this is an annoynomus function that will call itset when the interval is set
+
+
+// addEventListener
+newElement.addEventListener("click", function(){
+    
+}); 
+// false or true value can be added betwen }...); false is the default
+// addEventListner will listen to the event listed in the "", in this example, it is listening to the click on the "newElement" element
+// addEventListner() is a standard method in Javascript
+
+
+// Prevent Default
+function showResponse(event){
+    event.preventDefault();
+    "..."
+}
+// Prevent Default should be the first line written after the function is named
+// Prevent Default will prvent the default action of an element
+// For example, forms will clear the data after submition 
+
+
+// 4.2 43:14
