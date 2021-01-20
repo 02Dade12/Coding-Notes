@@ -122,3 +122,10 @@ var clearClass = "";
 clearClass.empty();
 // this will empty out any data that is within the class
 // these have the same value
+
+
+// this
+console.log(this);
+// if a variable is not passed down into its nested function "this", "this" will print out the window object
+// keep the variable within the function and close them off if they are not meant to be passed through
+// return; to return a value outside of the nested function
