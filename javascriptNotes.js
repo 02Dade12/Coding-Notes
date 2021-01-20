@@ -177,6 +177,9 @@ for ( var i = 0; i < pickMe.length; i++){
 }
 // In this example, the document will set the CSS font color attribute to red for all "P-tags"
 // This is equvalient to adding CSS Style inline to our JavaScript
+pickAll = document.querySelectorAll("P").value.trim(); 
+// .trim() will remove the white space (blanks) from the beginning and ends of strings, not inbetween
+
 
 
 // createElement & appendChild
@@ -195,32 +198,60 @@ var list = document.getElementsByTagName("li");
 
 
 // setInterval()
-setInterval(() => {
+setInterval(function(){
     
 clearInterval();
 }, interval);
 // this allows you to set the time in milliseconds 
+// false or true value can be added betwen }...); false is the default
 // this taks a functions to let you know what should be done during the interval
 // this is an annoynomus function that will call itset when the interval is set
 
 
-// addEventListener
-newElement.addEventListener("click", function(){
+// addEventListener & Event
+newElement.addEventListener("click", function(event){
+    // event is a JS event folllowed by the property which is based on the type of event
     
-}); 
-// false or true value can be added betwen }...); false is the default
-// addEventListner will listen to the event listed in the "", in this example, it is listening to the click on the "newElement" element
-// addEventListner() is a standard method in Javascript
-
-
-// Prevent Default
-function showResponse(event){
     event.preventDefault();
-    "..."
-}
-// Prevent Default should be the first line written after the function is named
-// Prevent Default will prvent the default action of an element
-// For example, forms will clear the data after submition 
+        // Prevent Default should be the first line written after the function is named
+        // Prevent Default will prvent the default action of an element
+    event.key
+        // this will record the key press
+    event.keyCode
+        // this will record the code of the key pressed
+    event.target
+        //  this will listen for whatever was clicked (if in event lister)
+    event.dataset
+        // dataset is an object that holds all of our data attributes
+    event.stopPropagation();
+        // this will prevent event bubbeling (a child element event will not effect a parent element)
+}); 
+// addEventListner() is a standard method in Javascript
+// addEventListner will listen to the event listed in the ""
+// Event Types // 
+// "click" will listen for a click event
+// "change" will listen for if something changes
+// "keydown" this will listen to capture what key was pressed down
+// "keyup" this will listen to capture what key is released (good for buttons being held down)
 
 
-// 4.2 43:14
+// Local Storage
+newElement.addEventListener("click", function(){
+    localStorage.getItem("key", "value")
+    sessionStorage.setItem("key", "value")
+
+    localStorage.setItem("key", "value")
+    sessionStorage.setItem("key", "value")
+    
+    localStorage.setItem("key", JSON.stringify(objVar));
+        // OBJECTS cannot be saved straight into local storage and are required to be stringify-ed first
+        // stringify with JSON.stringify()
+        // JSON.parse(localStorage.setItem("key", "value") is how we turn a string back into an Object
+});
+// No sensitive information should be saved in local storage
+// getItem this will retrieve the users saved data (if any)
+// setItem will save the user info 
+// localStorage will save the info in the users local storage
+// sessionStorage will save the info only for the duration of the session
+
+   
