@@ -1,7 +1,7 @@
 // Used to create dynamic web applications that take in user inputs, change what’s displayed to users, animate elements, and much more.
 
 
-// Basic Javascript cansist of the following:
+// Basic Javascript cnsist of the following:
 
 
 // Line comments
