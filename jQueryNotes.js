@@ -7,6 +7,9 @@
 // += is the corret syntax to add by more than one digit
 // -= is the corret syntax to subtract by more than one digit
 
+// Adding to HTML
+// .createRow();
+// .html()
 
 // .ready 
 $(document).ready(function(){
@@ -120,8 +123,8 @@ addClassExample.addClass("big bold underline");
 // . empty();
 var clearClass = "";
 clearClass.empty();
-// this will empty out any data that is within the class
-// these have the same value
+// . empty will empty out any data that is within the element / comtent
+// = ""; will replace the string value with ""
 
 
 // this
@@ -129,3 +132,46 @@ console.log(this);
 // if a variable is not passed down into its nested function "this", "this" will print out the window object
 // keep the variable within the function and close them off if they are not meant to be passed through
 // return; to return a value outside of the nested function
+
+
+// .attr
+clearClass.attr("id", "clearClass");
+// .set attr could be used to set an id
+
+// AJAX
+
+var queryURL = "apiKey"
+
+ajax({
+    URL: queryURL,
+    method: GET, 
+}).then(function(response){
+    console.log(response);
+});
+// AJAX is a method of jQuery
+// Use AJAX to return information from API's
+// Below are AJAX methods telling it what to do with the info
+// GET - Method this information is recieved
+// POST -
+// PUT/UPDATE - 
+// DELETE -
+// -- followed by --
+// .then - then do something with the data
+// this information will show up once everything is 
+// Get through the info with .dot notation
+// AJAX by default will bring back a JSON file
+
+// JSON
+JSON.stringify()
+JSON.parse()
+// Use .stringify to send info into local storage
+// Use .parse to bring the info out of local storage
+
+// Rounding Decimals
+var roundthis = roundthis.toFixed(2);
+// A number must be placed between () in order to indicate how many decimals numbers to round too
+
+
+// .val().trim()
+var trimming = trimming.val().trim();
+// this will make sure there is not empty space at the end of the string
