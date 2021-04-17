@@ -142,7 +142,7 @@ clearClass.attr("id", "clearClass");
 
 var queryURL = "apiKey"
 
-ajax({
+$.ajax({
     URL: queryURL,
     method: GET, 
 }).then(function(response){
